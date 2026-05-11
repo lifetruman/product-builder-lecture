@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="2강. MVP의 정의와 흔한 오해, 만들기 전에 검증할 수 있는 가벼운 방법들.">
+    <title>2강. MVP 만들기 — 프로덕트 빌더 강의</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-disqus-identifier="lesson-mvp">
+    <header class="site-header">
+        <a class="site-title" href="index.html">프로덕트 빌더 강의</a>
+        <nav class="site-nav" aria-label="주 메뉴">
+            <a href="index.html">홈</a>
+            <a href="lesson-discovery.html" aria-current="page">강의</a>
+            <a href="lotto.html">도구</a>
+            <a href="about.html">소개</a>
+            <a href="contact.html">문의</a>
+        </nav>
+        <button id="theme-toggle" type="button" aria-label="색상 테마 전환">Dark mode</button>
+    </header>
+
+    <main class="article">
+        <article>
+            <h1>2강. MVP 만들기</h1>
+            <p class="lead">
+                MVP(Minimum Viable Product)는 가장 많이 들으면서도 가장 자주 오해받는 개념입니다.
+                이번 강에서는 MVP가 무엇이고, 무엇이 아닌지, 그리고 만들기 전에 검증할 수 있는
+                더 가벼운 방법은 무엇이 있는지 정리합니다.
+            </p>
+
+            <h2>MVP는 "기능을 줄인 제품"이 아닙니다</h2>
+            <p>
+                MVP를 "완성품에서 기능을 빼낸 버전"으로 받아들이면, 결국 부족한 제품을 출시하고 실망하기 쉽습니다.
+                원래 MVP의 정의는 "학습에 필요한 최소한의 산출물"입니다. 즉, MVP의 목적은 매출이 아니라
+                <strong>가설을 빠르게 검증해 다음 의사결정에 필요한 데이터를 얻는 것</strong>입니다.
+            </p>
+
+            <h2>코드를 쓰기 전에 할 수 있는 검증</h2>
+            <p>
+                많은 가설은 코드 없이도 검증 가능합니다. 시간이 가장 비싸므로, 만들기 전에 다음 단계를 한 번씩
+                통과해 보는 게 좋습니다.
+            </p>
+            <ul>
+                <li><strong>랜딩 페이지 테스트:</strong> 제품 설명과 가격, 신청 버튼만 있는 한 페이지를 만들어 광고로 트래픽을 보내봅니다. 클릭/가입 전환율이 가설의 첫 번째 신호가 됩니다.</li>
+                <li><strong>수기 운영(Concierge):</strong> 자동화를 만들기 전에 한동안 운영자가 수동으로 처리해 봅니다. 자동화할 만한 가치가 있는지 확인할 수 있고, 작업의 진짜 병목도 보입니다.</li>
+                <li><strong>Wizard of Oz:</strong> 사용자에겐 자동화된 것처럼 보이지만 뒤에서 사람이 결과를 만드는 방식. 인터페이스 가설을 분리해서 검증할 때 유용합니다.</li>
+            </ul>
+
+            <h2>그래도 만들어야 할 때</h2>
+            <p>
+                가설 검증이 끝나 만들기로 결정했다면, 다음 원칙이 도움이 됩니다.
+            </p>
+            <ul>
+                <li>핵심 가치 한 가지에만 집중합니다. 부가 기능은 첫 출시 이후로 미룹니다.</li>
+                <li>"이 기능이 없으면 가설을 검증할 수 없는가?"를 모든 기능 후보에 물어봅니다. 답이 "그래도 어떻게든 된다"면 일단 미룹니다.</li>
+                <li>측정 가능한 종료 조건을 미리 정합니다. "1주에 N명이 X 행동을 하면 다음 단계로, 아니면 가설을 폐기"처럼.</li>
+            </ul>
+
+            <h2>흔한 함정</h2>
+            <p>
+                MVP라는 이름으로 출시했지만 가설을 검증하는 게 아니라 단순히 "작은 정식 제품"을 만든 경우가
+                많습니다. 결과가 어떻게 나와도 그것이 가설에 대해 무엇을 말하는지 사전에 정해 두지 않으면,
+                MVP 단계 자체가 의미를 잃습니다. 출시 전 한 문장으로 "이번에 우리가 확인하려는 것"을 적어 두세요.
+            </p>
+
+            <h2>이번 강의의 핵심 정리</h2>
+            <ul>
+                <li>MVP의 목적은 매출이 아니라 학습입니다.</li>
+                <li>코드를 쓰기 전에 랜딩 페이지, 수기 운영, Wizard of Oz로 검증할 수 있습니다.</li>
+                <li>만들 때는 핵심 가치 한 가지에만 집중합니다.</li>
+                <li>출시 전, "이번에 확인하려는 가설"과 "성공/실패 기준"을 명문화합니다.</li>
+            </ul>
+
+            <nav class="lesson-nav" aria-label="강의 간 이동">
+                <a href="lesson-discovery.html" rel="prev">← 1강. 문제 발견</a>
+                <a href="lesson-launch.html" rel="next">3강. 출시와 측정 →</a>
+            </nav>
+        </article>
+
+        <section id="comments">
+            <h2>댓글</h2>
+            <div id="disqus_thread"></div>
+            <noscript>JavaScript를 활성화하면 <a href="https://disqus.com/?ref_noscript">Disqus 댓글</a>을 볼 수 있습니다.</noscript>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 프로덕트 빌더 강의</p>
+        <p>
+            <a href="privacy.html">개인정보처리방침</a>
+            ·
+            <a href="contact.html">문의</a>
+        </p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
