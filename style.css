@@ -661,6 +661,13 @@ main.home {
     margin-top: 4rem;
     padding-top: 2rem;
     border-top: 1px solid var(--surface-border);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+#disqus_thread {
+    background-color: var(--bg-color);
+    color: var(--text-color);
 }
 
 #comments h2 {

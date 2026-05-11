@@ -15,21 +15,32 @@ function applyTheme(theme, toggleBtn) {
     }
 }
 
-function reloadDisqusForTheme() {
-    if (!window.DISQUS || typeof window.DISQUS.reset !== 'function') {
-        return;
-    }
+function loadDisqusEmbed() {
+    const thread = document.getElementById('disqus_thread');
     const identifier = document.body.dataset.disqusIdentifier;
-    if (!identifier) {
+    if (!thread || !identifier) {
         return;
     }
-    window.DISQUS.reset({
-        reload: true,
-        config: function () {
-            this.page.url = window.location.href;
-            this.page.identifier = identifier;
-        },
-    });
+    window.disqus_config = function () {
+        this.page.url = window.location.href;
+        this.page.identifier = identifier;
+    };
+    const s = document.createElement('script');
+    s.src = 'https://productbilder-2.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', String(Date.now()));
+    document.head.appendChild(s);
+}
+
+function reembedDisqusForTheme() {
+    const thread = document.getElementById('disqus_thread');
+    if (!thread) {
+        return;
+    }
+    thread.innerHTML = '';
+    document.querySelectorAll('script[src*="disqus.com/embed.js"]').forEach((s) => s.remove());
+    delete window.DISQUS;
+    delete window.disqus_config;
+    loadDisqusEmbed();
 }
 
 function initTheme() {
@@ -43,7 +54,9 @@ function initTheme() {
         const next = current === 'dark' ? 'light' : 'dark';
         localStorage.setItem(THEME_STORAGE_KEY, next);
         applyTheme(next, themeToggleBtn);
-        reloadDisqusForTheme();
+        if (document.getElementById('disqus_thread')) {
+            setTimeout(reembedDisqusForTheme, 250);
+        }
     });
 }
 
@@ -87,19 +100,7 @@ function initContactForm() {
 }
 
 function initDisqus() {
-    const thread = document.getElementById('disqus_thread');
-    const identifier = document.body.dataset.disqusIdentifier;
-    if (!thread || !identifier) {
-        return;
-    }
-    window.disqus_config = function () {
-        this.page.url = window.location.href;
-        this.page.identifier = identifier;
-    };
-    const s = document.createElement('script');
-    s.src = 'https://productbilder-2.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', String(Date.now()));
-    document.head.appendChild(s);
+    loadDisqusEmbed();
 }
 
 function initConsentBanner() {
