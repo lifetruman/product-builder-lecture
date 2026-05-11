@@ -103,3 +103,11 @@ async function handleContactSubmit(event) {
 }
 
 contactForm.addEventListener('submit', handleContactSubmit);
+
+(function loadDisqus() {
+    const d = document;
+    const s = d.createElement('script');
+    s.src = 'https://productbilder-2.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', String(Date.now()));
+    (d.head || d.body).appendChild(s);
+})();
