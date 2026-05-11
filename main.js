@@ -29,45 +29,6 @@ function initTheme() {
     });
 }
 
-function getBallColor(number) {
-    if (number <= 10) {
-        return '#fbc400';
-    } else if (number <= 20) {
-        return '#69c8f2';
-    } else if (number <= 30) {
-        return '#ff7272';
-    } else if (number <= 40) {
-        return '#aaa';
-    }
-    return '#b0d840';
-}
-
-function generateLottoNumbers() {
-    const numbers = new Set();
-    while (numbers.size < 6) {
-        numbers.add(Math.floor(Math.random() * 45) + 1);
-    }
-    return Array.from(numbers).sort((a, b) => a - b);
-}
-
-function initLotto() {
-    const lottoNumbersDiv = document.getElementById('lotto-numbers');
-    const generateBtn = document.getElementById('generate-btn');
-    if (!lottoNumbersDiv || !generateBtn) {
-        return;
-    }
-    generateBtn.addEventListener('click', () => {
-        lottoNumbersDiv.innerHTML = '';
-        for (const number of generateLottoNumbers()) {
-            const ball = document.createElement('div');
-            ball.classList.add('lotto-ball');
-            ball.textContent = number;
-            ball.style.backgroundColor = getBallColor(number);
-            lottoNumbersDiv.appendChild(ball);
-        }
-    });
-}
-
 function initContactForm() {
     const contactForm = document.getElementById('contact-form');
     const contactStatus = document.getElementById('contact-status');
@@ -124,6 +85,5 @@ function initDisqus() {
 }
 
 initTheme();
-initLotto();
 initContactForm();
 initDisqus();
