@@ -27,7 +27,10 @@
 </head>
 <body>
     <header class="site-header">
-        <a class="site-title" href="index.html">프로덕트 빌더 강의</a>
+        <a class="site-title" href="index.html">
+            <span class="site-mark" aria-hidden="true">P</span>
+            프로덕트 빌더 강의
+        </a>
         <nav class="site-nav" aria-label="주 메뉴">
             <a href="index.html">홈</a>
             <a href="lesson-discovery.html">강의</a>
@@ -40,75 +43,114 @@
 
     <main class="home">
         <section class="hero">
-            <h1>아이디어부터 출시까지, 한 단계씩</h1>
+            <p class="eyebrow">한국어 프로덕트 강의</p>
+            <h1>아이디어부터 출시까지,<br>한 단계씩.</h1>
             <p class="lead">
-                혼자서 또는 작은 팀으로 프로덕트를 만들고 싶지만 어디서부터 시작해야 할지 막막하다면,
-                이 강의가 도움이 됩니다. 문제 발견에서 MVP 검증, 출시 후 측정, 가격·채널·리텐션까지의
-                흐름을 실무 관점에서 정리합니다.
+                혼자서, 또는 작은 팀으로 프로덕트를 만들고 싶지만 어디서부터 시작해야 할지 막막하다면 —
+                문제 발견에서 MVP 검증, 출시 후 측정, 가격·채널·리텐션까지의 흐름을 실무 관점에서 정리합니다.
             </p>
-            <a class="cta" href="lesson-discovery.html">첫 강의 시작하기</a>
+            <div class="hero-actions">
+                <a class="cta" href="lesson-discovery.html">첫 강의 시작하기</a>
+                <a class="cta cta-secondary" href="about.html">강의 소개 →</a>
+            </div>
         </section>
 
-        <section class="lessons-grid">
-            <h2>강의 목록</h2>
-            <div class="grid">
+        <section class="section">
+            <h2 class="section-title">이 강의가 도움이 되는 분</h2>
+            <div class="audience-grid">
+                <div class="audience-card">
+                    <h3>처음 만드시는 분</h3>
+                    <p>아이디어는 있지만 어디서 시작해야 할지 모르겠고, "MVP", "검증" 같은 단어가 추상적으로 느껴지는 분.</p>
+                </div>
+                <div class="audience-card">
+                    <h3>소규모로 운영 중인 분</h3>
+                    <p>혼자 또는 2~3명의 작은 팀에서 이미 무언가를 만들고 있지만, 다음 한 걸음을 어디로 둘지 정리하고 싶은 분.</p>
+                </div>
+                <div class="audience-card">
+                    <h3>실험 중심으로 가고 싶은 분</h3>
+                    <p>크고 비싼 마케팅 전략보다, 작은 실험과 반복으로 답을 찾아가는 방식을 선호하시는 분.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">강의 목록</h2>
+            <p class="section-desc">총 7강의 본 강의는 한 사이클로 연결되도록 설계되어 있습니다. 1강부터 차례대로 읽기를 권합니다.</p>
+            <div class="lesson-grid">
                 <article class="lesson-card">
-                    <h3><a href="lesson-discovery.html">1강. 문제 발견</a></h3>
+                    <span class="lesson-num">01</span>
+                    <h3><a href="lesson-discovery.html">문제 발견</a></h3>
                     <p>사용자가 진짜로 가진 문제를 찾아내는 방법과, 아이디어를 검증 가능한 가설로 바꾸는 절차.</p>
                 </article>
                 <article class="lesson-card">
-                    <h3><a href="lesson-mvp.html">2강. MVP 만들기</a></h3>
+                    <span class="lesson-num">02</span>
+                    <h3><a href="lesson-mvp.html">MVP 만들기</a></h3>
                     <p>"최소 기능 제품"의 의미와, 만들기 전에 검증할 수 있는 더 가벼운 방법들.</p>
                 </article>
                 <article class="lesson-card">
-                    <h3><a href="lesson-launch.html">3강. 출시와 측정</a></h3>
+                    <span class="lesson-num">03</span>
+                    <h3><a href="lesson-launch.html">출시와 측정</a></h3>
                     <p>출시는 끝이 아니라 시작. 무엇을 측정하고 어떻게 반복할지.</p>
                 </article>
                 <article class="lesson-card">
-                    <h3><a href="lesson-interview.html">4강. 사용자 인터뷰 실전</a></h3>
+                    <span class="lesson-num">04</span>
+                    <h3><a href="lesson-interview.html">사용자 인터뷰 실전</a></h3>
                     <p>인터뷰의 준비, 진행, 분석을 한 페이지 가이드와 함께 정리.</p>
                 </article>
                 <article class="lesson-card">
-                    <h3><a href="lesson-pricing.html">5강. 가격 책정의 기본</a></h3>
+                    <span class="lesson-num">05</span>
+                    <h3><a href="lesson-pricing.html">가격 책정의 기본</a></h3>
                     <p>가치 기반 가격 책정과 가격 실험, 그리고 흔한 함정.</p>
                 </article>
                 <article class="lesson-card">
-                    <h3><a href="lesson-channels.html">6강. 마케팅 채널 선택하기</a></h3>
+                    <span class="lesson-num">06</span>
+                    <h3><a href="lesson-channels.html">마케팅 채널 선택</a></h3>
                     <p>초기 단계에서 한 채널에 집중하는 법과 채널별 특징.</p>
                 </article>
                 <article class="lesson-card">
-                    <h3><a href="lesson-retention.html">7강. 사용자 리텐션 만들기</a></h3>
+                    <span class="lesson-num">07</span>
+                    <h3><a href="lesson-retention.html">사용자 리텐션</a></h3>
                     <p>가입은 시작일 뿐. 사용자가 다시 돌아오게 만드는 설계.</p>
                 </article>
             </div>
         </section>
 
-        <section class="lessons-grid">
-            <h2>노트</h2>
-            <div class="grid">
-                <article class="lesson-card">
+        <section class="section">
+            <h2 class="section-title">노트</h2>
+            <p class="section-desc">강의를 보완하는 짧은 글과 바로 쓸 수 있는 양식 모음.</p>
+            <div class="lesson-grid">
+                <article class="lesson-card lesson-card-note">
                     <h3><a href="note-faq.html">자주 묻는 질문</a></h3>
                     <p>강의 시간, 사전 지식, 도구, 비용에 대한 답.</p>
                 </article>
-                <article class="lesson-card">
+                <article class="lesson-card lesson-card-note">
                     <h3><a href="note-tools.html">추천 도구</a></h3>
                     <p>1인 메이커가 자주 쓰는 무료/저비용 도구 카테고리.</p>
                 </article>
-                <article class="lesson-card">
-                    <h3><a href="note-interview-template.html">사용자 인터뷰 템플릿</a></h3>
+                <article class="lesson-card lesson-card-note">
+                    <h3><a href="note-interview-template.html">인터뷰 템플릿</a></h3>
                     <p>4강에서 다룬 한 페이지 가이드를 그대로 복사해 쓸 수 있는 양식.</p>
                 </article>
             </div>
         </section>
 
-        <section class="about-snippet">
+        <section class="section">
+            <h2 class="section-title">이렇게 활용해 보세요</h2>
+            <ol class="usage-list">
+                <li><strong>주 1강 페이스</strong>로 본인 프로젝트에 적용하면서 읽기.</li>
+                <li>각 강의 끝의 <strong>핵심 정리</strong>를 본인 노트에 옮겨 적고, 1주 뒤에 다시 보기.</li>
+                <li><strong>5명 인터뷰 → MVP → 출시 → 1개 채널</strong> 사이클을 한 번 완주하는 것을 목표로.</li>
+                <li>막히는 지점은 <a href="contact.html">문의</a>로 알려주시면 다음 강의의 보강 후보가 됩니다.</li>
+            </ol>
+        </section>
+
+        <section class="section about-snippet">
             <h2>이 강의에 대해</h2>
             <p>
-                실무에서 자주 부딪히는 함정과 그 해결책을 한국어로 정리합니다. 거대 기업의 성공 사례가 아닌,
-                혼자 또는 소규모 팀이 매일 마주하는 결정에 도움이 되는 내용을 다룹니다.
-                모든 본문은 무료로 공개됩니다.
+                실무에서 자주 부딪히는 함정과 그 해결책을 한국어로 정리합니다. 거대 기업의 사례가 아닌,
+                혼자 또는 소규모 팀이 매일 마주하는 결정에 도움이 되는 내용을 다룹니다. 모든 본문은 무료로 공개됩니다.
             </p>
-            <p><a href="about.html">소개 페이지에서 더 보기 →</a></p>
+            <p><a class="more-link" href="about.html">소개 페이지에서 더 보기 →</a></p>
         </section>
     </main>
 
