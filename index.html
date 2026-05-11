@@ -13,6 +13,29 @@
         <div id="lotto-numbers"></div>
         <button id="generate-btn">Generate Numbers</button>
     </div>
+    <section id="contact">
+        <h2>제휴 문의</h2>
+        <form id="contact-form" action="https://formspree.io/f/mojryeye" method="POST">
+            <label>
+                이름
+                <input type="text" name="name" required>
+            </label>
+            <label>
+                이메일
+                <input type="email" name="email" required>
+            </label>
+            <label>
+                회사명 (선택)
+                <input type="text" name="company">
+            </label>
+            <label>
+                문의 내용
+                <textarea name="message" rows="4" required></textarea>
+            </label>
+            <button type="submit">보내기</button>
+            <p id="contact-status" role="status" aria-live="polite"></p>
+        </form>
+    </section>
     <script src="main.js"></script>
 </body>
 </html>

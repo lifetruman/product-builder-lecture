@@ -65,3 +65,41 @@ generateBtn.addEventListener('click', () => {
     const numbers = generateLottoNumbers();
     displayNumbers(numbers);
 });
+
+const contactForm = document.getElementById('contact-form');
+const contactStatus = document.getElementById('contact-status');
+
+async function handleContactSubmit(event) {
+    event.preventDefault();
+    const submitBtn = contactForm.querySelector('button[type="submit"]');
+    submitBtn.disabled = true;
+    contactStatus.className = '';
+    contactStatus.textContent = '전송 중...';
+
+    try {
+        const response = await fetch(contactForm.action, {
+            method: 'POST',
+            body: new FormData(contactForm),
+            headers: { Accept: 'application/json' },
+        });
+        if (response.ok) {
+            contactForm.reset();
+            contactStatus.className = 'success';
+            contactStatus.textContent = '문의가 전송되었습니다. 감사합니다!';
+        } else {
+            const data = await response.json().catch(() => ({}));
+            const message = Array.isArray(data.errors)
+                ? data.errors.map((e) => e.message).join(', ')
+                : '전송에 실패했습니다. 잠시 후 다시 시도해주세요.';
+            contactStatus.className = 'error';
+            contactStatus.textContent = message;
+        }
+    } catch {
+        contactStatus.className = 'error';
+        contactStatus.textContent = '네트워크 오류가 발생했습니다. 다시 시도해주세요.';
+    } finally {
+        submitBtn.disabled = false;
+    }
+}
+
+contactForm.addEventListener('submit', handleContactSubmit);
