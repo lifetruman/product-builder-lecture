@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build": "mkdir -p dist && cp *.html main.js style.css dist/",
+    "build": "mkdir -p dist && cp *.html main.js style.css ads.txt dist/",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
