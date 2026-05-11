@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>/index.html</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>/about.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>/contact.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>/privacy.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>/terms.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>/lesson-discovery.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>/lesson-mvp.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>/lesson-launch.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>/lesson-interview.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>/lesson-pricing.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>/lesson-channels.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>/lesson-retention.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>/note-faq.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>/note-tools.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>/note-interview-template.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+</urlset>

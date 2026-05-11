@@ -84,6 +84,33 @@ function initDisqus() {
     document.head.appendChild(s);
 }
 
+function initConsentBanner() {
+    const CONSENT_KEY = 'consent';
+    if (localStorage.getItem(CONSENT_KEY)) {
+        return;
+    }
+    const banner = document.createElement('div');
+    banner.id = 'consent-banner';
+    banner.setAttribute('role', 'dialog');
+    banner.setAttribute('aria-label', '쿠키 사용 동의');
+    banner.innerHTML = ''
+        + '<p>본 사이트는 광고와 분석을 위해 쿠키를 사용합니다. '
+        + '자세한 내용은 <a href="privacy.html">개인정보처리방침</a>을 참고해 주세요.</p>'
+        + '<div class="consent-actions">'
+        + '<button type="button" data-consent="decline">거부</button>'
+        + '<button type="button" data-consent="accept" class="primary">동의</button>'
+        + '</div>';
+    document.body.appendChild(banner);
+    banner.addEventListener('click', (event) => {
+        const choice = event.target.dataset && event.target.dataset.consent;
+        if (choice === 'accept' || choice === 'decline') {
+            localStorage.setItem(CONSENT_KEY, choice);
+            banner.remove();
+        }
+    });
+}
+
 initTheme();
 initContactForm();
 initDisqus();
+initConsentBanner();
