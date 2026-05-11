@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build": "echo 'static site - no build step needed'",
+    "build": "mkdir -p dist && cp index.html main.js style.css dist/",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
