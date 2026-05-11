@@ -15,6 +15,23 @@ function applyTheme(theme, toggleBtn) {
     }
 }
 
+function reloadDisqusForTheme() {
+    if (!window.DISQUS || typeof window.DISQUS.reset !== 'function') {
+        return;
+    }
+    const identifier = document.body.dataset.disqusIdentifier;
+    if (!identifier) {
+        return;
+    }
+    window.DISQUS.reset({
+        reload: true,
+        config: function () {
+            this.page.url = window.location.href;
+            this.page.identifier = identifier;
+        },
+    });
+}
+
 function initTheme() {
     const themeToggleBtn = document.getElementById('theme-toggle');
     applyTheme(getInitialTheme(), themeToggleBtn);
@@ -26,6 +43,7 @@ function initTheme() {
         const next = current === 'dark' ? 'light' : 'dark';
         localStorage.setItem(THEME_STORAGE_KEY, next);
         applyTheme(next, themeToggleBtn);
+        reloadDisqusForTheme();
     });
 }
 
